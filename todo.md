@@ -1,0 +1,3 @@
+- Send user an email on completion of his order
+- Remove times that are completely occupied.
+- Before payment function goes, recomfirm if there is still available space for that time, if not, redirect them to the order form with their data still on the form just prompt them to edit it.

@@ -1,0 +1,132 @@
+{
+  "cities": [
+    {
+      "city": "Ado-Ekiti",
+      "nearbyCities": ["Ikere-Ekiti", "Ijero-Ekiti", "Ikole-Ekiti"]
+    },
+    {
+      "city": "Ikere-Ekiti",
+      "nearbyCities": ["Ado-Ekiti", "Ijero-Ekiti", "Ondo"]
+    },
+    {
+      "city": "Ijero-Ekiti",
+      "nearbyCities": ["Ado-Ekiti", "Ikere-Ekiti", "Ilesa"]
+    },
+    {
+      "city": "Ikole-Ekiti",
+      "nearbyCities": ["Ado-Ekiti", "Ijero-Ekiti", "Ilesa"]
+    },
+    {
+      "city": "Lagos",
+      "nearbyCities": ["Ikeja", "Ikorodu", "Epe"]
+    },
+    {
+      "city": "Ikeja",
+      "nearbyCities": ["Lagos", "Ikorodu", "Ota"]
+    },
+    {
+      "city": "Epe",
+      "nearbyCities": ["Ikorodu", "Lagos", "Ijebu-Ode"]
+    },
+    {
+      "city": "Badagry",
+      "nearbyCities": ["Ota", "Lagos", "Ikeja"]
+    },
+    {
+      "city": "Ikorodu",
+      "nearbyCities": ["Ikeja", "Lagos", "Epe"]
+    },
+    {
+      "city": "Abeokuta",
+      "nearbyCities": ["Sagamu", "Ilaro", "Ota"]
+    },
+    {
+      "city": "Ijebu-Ode",
+      "nearbyCities": ["Sagamu", "Epe", "Abeokuta"]
+    },
+    {
+      "city": "Sagamu",
+      "nearbyCities": ["Ijebu-Ode", "Abeokuta", "Ikorodu"]
+    },
+    {
+      "city": "Ota",
+      "nearbyCities": ["Ikeja", "Abeokuta", "Ilaro"]
+    },
+    {
+      "city": "Ilaro",
+      "nearbyCities": ["Ota", "Abeokuta", "Sagamu"]
+    },
+    {
+      "city": "Ayetoro",
+      "nearbyCities": ["Abeokuta", "Ilaro", "Ota"]
+    },
+    {
+      "city": "Akure",
+      "nearbyCities": ["Ondo", "Ikare", "Ado-Ekiti"]
+    },
+    {
+      "city": "Ondo",
+      "nearbyCities": ["Akure", "Owo", "Ikere-Ekiti"]
+    },
+    {
+      "city": "Owo",
+      "nearbyCities": ["Akure", "Ondo", "Ikare"]
+    },
+    {
+      "city": "Ikare",
+      "nearbyCities": ["Akure", "Owo", "Ondo"]
+    },
+    {
+      "city": "Okitipupa",
+      "nearbyCities": ["Ondo", "Ijebu-Ode", "Akure"]
+    },
+    {
+      "city": "Osogbo",
+      "nearbyCities": ["Ile-Ife", "Ikirun", "Ilesa"]
+    },
+    {
+      "city": "Ile-Ife",
+      "nearbyCities": ["Osogbo", "Ilesa", "Ondo"]
+    },
+    {
+      "city": "Ilesa",
+      "nearbyCities": ["Osogbo", "Ile-Ife", "Ijero-Ekiti"]
+    },
+    {
+      "city": "Iwo",
+      "nearbyCities": ["Osogbo", "Ile-Ife", "Ogbomosho"]
+    },
+    {
+      "city": "Ede",
+      "nearbyCities": ["Osogbo", "Iwo", "Ile-Ife"]
+    },
+    {
+      "city": "Ikirun",
+      "nearbyCities": ["Osogbo", "Ede", "Ile-Ife"]
+    },
+    {
+      "city": "Ibadan",
+      "nearbyCities": ["Oyo", "Ogbomosho", "Iseyin"]
+    },
+    {
+      "city": "Oyo",
+      "nearbyCities": ["Ibadan", "Ogbomosho", "Iseyin"]
+    },
+    {
+      "city": "Ogbomosho",
+      "nearbyCities": ["Oyo", "Ibadan", "Iwo"]
+    },
+    {
+      "city": "Saki",
+      "nearbyCities": ["Iseyin", "Oyo", "Ibadan"]
+    },
+    {
+      "city": "Iseyin",
+      "nearbyCities": ["Saki", "Oyo", "Ibadan"]
+    },
+    {
+      "city": "Igboho",
+      "nearbyCities": ["Saki", "Iseyin", "Oyo"]
+    }
+  ]
+}
