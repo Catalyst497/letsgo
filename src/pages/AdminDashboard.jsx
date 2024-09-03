@@ -15,7 +15,7 @@ function AdminDashboard() {
   }
   const getRides = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/admin/ride");
+      const response = await axios.get("https://letsgo-i9ei.onrender.com/admin/ride");
       // console.log(response);
       dispatch(setRides(response.data));
     } catch (err) {

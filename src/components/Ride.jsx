@@ -11,7 +11,7 @@ function Ride({ ride, key, TbCurrencyNaira, ArrowRight, getRides }) {
     try {
       console.log(rides);
       const response = await axios.delete(
-        `http://localhost:3000/admin/ride/${id}`
+        `https://letsgo-i9ei.onrender.com/admin/ride/${id}`
       );
       console.log(response);
       // Filter out the deleted ride from the state

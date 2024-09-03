@@ -30,7 +30,7 @@ function AddModal({getRides}) {
     e.preventDefault();
     // Add new ride to the database here
     try {
-      const res = await axios.post("http://localhost:3000/admin/ride", adminRideData);
+      const res = await axios.post("https://letsgo-i9ei.onrender.com/admin/ride", adminRideData);
       console.log(res);
       if (res.data === "Ride Added Successfully") {
         setAddModalVisible(false);

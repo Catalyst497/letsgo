@@ -14,7 +14,7 @@ function AdminRegister() {
   });
   const handleSubmit = async(e) => {
     e.preventDefault();
-    const response = await axios.post("http://localhost:3000/admin/register", userData);
+    const response = await axios.post("https://letsgo-i9ei.onrender.com/admin/register", userData);
     console.log(response);
     alert("User registered")
     navigate("/admin/login")

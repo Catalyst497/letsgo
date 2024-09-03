@@ -19,7 +19,7 @@ function AdminLogin() {
       if (!userData.email) return setError("Enter your email address")
       if (!userData.password) return setError("Enter your password")
         console.log("Hello")
-      const response = await axios.post("http://localhost:3000/admin/login", userData);
+      const response = await axios.post("https://letsgo-i9ei.onrender.com/admin/login", userData);
       const { token } = response.data;
       localStorage.setItem("token", token);
       navigate("/admin")
