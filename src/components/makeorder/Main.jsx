@@ -3,7 +3,7 @@ import axios from "axios";
 import { FaCheck } from "react-icons/fa";
 import useResponsiveContent from "../../hooks/useResponsiveContent";
 import { PaystackButton } from "react-paystack";
-import SelectionInputs from "../selectionInputs";
+import SelectionInputs from "../SelectionInputs";
 import {useSelector, useDispatch} from "react-redux";
 import { setRideFormData } from "../../GlobalRedux/slices/AppSlice";
 

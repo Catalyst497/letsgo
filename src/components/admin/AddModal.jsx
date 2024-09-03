@@ -8,7 +8,7 @@ import {
   setAddModalOpen,
   setAdminRideData,
 } from "../../GlobalRedux/slices/AppSlice";
-import SelectionInputs from "../selectionInputs";
+import SelectionInputs from "../SelectionInputs";
 
 function AddModal({getRides}) {
   const dispatch = useDispatch();
