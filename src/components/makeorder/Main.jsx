@@ -2,49 +2,22 @@ import { useRef, useEffect, useState } from "react";
 import axios from "axios";
 import { FaCheck } from "react-icons/fa";
 import useResponsiveContent from "../../hooks/useResponsiveContent";
-import CTABtn from "../CTABtn";
-import DropdownInput from "./DropdownInput";
-import cities from "../../cities.json";
 import { PaystackButton } from "react-paystack";
+import SelectionInputs from "../selectionInputs";
+import {useSelector, useDispatch} from "react-redux";
+import { setRideFormData } from "../../GlobalRedux/slices/AppSlice";
 
 function Main() {
+  const dispatch = useDispatch();
   const { isMobile, isDesktop } = useResponsiveContent();
-
-  const fromCities = cities.cities.map((city) => city.city);
-  const [selectedFrom, setSelectedFrom] = useState("");
-  const [selectedTo, setSelectedTo] = useState("");
-  const [selectedTime, setSelectedTime] = useState("");
-  const [toCities, setToCities] = useState([]);
-  const timeOptions = ["08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM"];
+  const {rideFormData} = useSelector(st => st.app);
+  // const fromCities = cities.cities.map((city) => city.city);
+ 
   const [formError, setFormError] = useState("");
-  const [formData, setFormData] = useState({
-    email: "",
-    fromCity: selectedFrom,
-    toCity: selectedTo,
-    time: selectedTime,
-  });
   const [orderSuccess, setOrderSuccess] = useState(false);
   const [openResponse, setOpenResponse] = useState(false);
 
-  useEffect(() => {
-    if (selectedFrom) {
-      setToCities(
-        cities.cities.find((city) => {
-          if (city.city == selectedFrom) {
-            return city;
-          } else return;
-        }).nearbyCities
-      );
-    }
-  }, [selectedFrom]);
-  useEffect(() => {
-    setFormData({
-      ...formData,
-      fromCity: selectedFrom,
-      toCity: selectedTo,
-      time: selectedTime,
-    });
-  }, [selectedFrom, selectedTo, selectedTime]);
+ 
 
   useEffect(() => {
     if (orderSuccess) {
@@ -55,18 +28,18 @@ function Main() {
   const submitForm = async (e) => {
     e.preventDefault();
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.email || !regex.test(formData.email))
+    if (!rideFormData.email || !regex.test(rideFormData.email))
       return setFormError("Please enter a valid email address");
-    if (!formData.fromCity)
+    if (!rideFormData.fromCity)
       return setFormError("Please tell us where you are coming from");
-    if (!formData.toCity)
+    if (!rideFormData.toCity)
       return setFormError("Please select where you are headed.");
-    if (!formData.time)
+    if (!rideFormData.time)
       return setFormError("Please tell us when you would like to go.");
     try {
       const response = await axios.post(
         "http://localhost:3000/bookform",
-        formData
+        rideFormData
       );
       if (response.data === "Order Successful") {
         setOrderSuccess(true);
@@ -116,7 +89,8 @@ function Main() {
               <FaCheck className="text-white" size={50} />
             </div>
             <div className="text-center w-max">
-              Your Order has been completed.<br />
+              Your Order has been completed.
+              <br />
               <PaystackButton {...componentProps} className="underline" />{" "}
             </div>
           </div>
@@ -132,40 +106,21 @@ function Main() {
             <input
               type="email"
               name="email"
-              value={formData.email}
+              value={rideFormData.email}
+              className="p-2 border-[1px] border-gray-300"
               onChange={(e) =>
-                setFormData({ ...formData, email: e.target.value })
+                dispatch(setRideFormData({ ...rideFormData, email: e.target.value }))
               }
             />
           </div>
-          <div className="flex flex-col gap-4">
-            <div>Where are you coming from?(City)</div>
-            <DropdownInput
-              selectedValue={selectedFrom}
-              setSelectedValue={setSelectedFrom}
-              values={fromCities}
-            />
-          </div>
-          <div className="flex flex-col gap-4">
-            <div>Where are you headed?(City)</div>
-            <DropdownInput
-              selectedValue={selectedTo}
-              setSelectedValue={setSelectedTo}
-              values={toCities}
-            />
-          </div>
-          <div>
-            <div>When do you want to go?</div>
-            <DropdownInput
-              selectedValue={selectedTime}
-              setSelectedValue={setSelectedTime}
-              values={timeOptions}
-              placeholder="Select a time"
-            />
-          </div>
-          <div className="flex justify-center">
-            <CTABtn action={submitForm} />
-          </div>
+          <SelectionInputs
+            fromStatement={"Where are you coming from?(City)"}
+            toStatement={"Where are you headed?(City)"}
+            timeStatement={"When do you want to go?"}
+            handleSubmit={submitForm}
+            rideFormData={rideFormData}
+            setRideFormData={setRideFormData}
+          />
         </form>
       </div>
     </div>

@@ -4,8 +4,10 @@
 @tailwind utilities;
 
 body {
-  @apply font-openSans font-semibold text-darkGray text-[1.4rem] md:text-[1.6rem];
+  @apply font-openSans font-semibold text-darkGray text-[1rem] md:text-[1.2rem];
 }
+
+
 .order-form {
   @apply font-normal text-black;
 }

@@ -1,8 +1,10 @@
 const express = require("express");
-const Order = require("./models/Order");
 const app = express();
 const cors = require("cors");
 const https = require("https");
+const adminRoutes = require("./routes/adminRoutes")
+const appRoutes = require("./routes/appRoutes")
+
 
 require("dotenv").config();
 
@@ -14,6 +16,7 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+app.use(express.json());
 
 const initPayStackTransaction = () => {
   const params = JSON.stringify({
@@ -53,21 +56,9 @@ const initPayStackTransaction = () => {
 };
 
 
-app.post("/bookform", async function (req, res) {
-  try {
-    const { email, fromCity, toCity, time } = req.body;
-    const newFormData = new Order({
-      email,
-      fromCity,
-      toCity,
-      selectedTime: time,
-    });
-    await newFormData.save();
-    res.status(201).json("Order Successful");
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-});
+
+app.use("/admin", adminRoutes)
+app.use(appRoutes)
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

@@ -3,6 +3,10 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import MakeOrder from "./pages/MakeOrder";
+import AdminLogin from "./pages/AdminLogin";
+// import AdminRegister from "./pages/AdminRegister";
+import AdminDashboard from "./pages/AdminDashboard";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -10,6 +14,16 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/makeorder" element={<MakeOrder />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
+        {/* <Route path="/admin/register" element={<AdminRegister />} /> */}
+        <Route
+          path="/admin"
+          element={
+            <PrivateRoute>
+              <AdminDashboard />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </>
   );

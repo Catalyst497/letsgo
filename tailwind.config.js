@@ -13,6 +13,10 @@ export default {
         softGreen: "#98FB98",
         woodColor: "#F5E3C8",
         lightGray: "#D1D1D1",
+        gainsboro: "#DCDCDC",
+        sandyBrown: "#F4A460",
+        steelBlue: "#B0C4DE",
+        darkSlateGray: "#2F4F4F"
       },
       spacing: {
         sectionPad: "4.8rem",

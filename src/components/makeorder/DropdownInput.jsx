@@ -38,7 +38,7 @@ function DropdownInput({
 
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full border-[1px] border-gray-300">
       <input
         type="text"
         value={selectedValue}
