@@ -9,6 +9,8 @@ const appSlice = createSlice({
     fromCities: cities.cities.map((city) => city.city),
     addModalOpen: false,
     toCities: [],
+    loading:false,
+    orderedRide: {},
     rideFormData: {
       email: "",
       fromCity: "",
@@ -42,6 +44,12 @@ const appSlice = createSlice({
     setRides(state, { payload }) {
       state.rides = payload;
     },
+    setLoading(state, { payload }) {
+      state.loading = payload;
+    },
+    setOrderedRide(state, { payload }) {
+      state.orderedRide = payload;
+    },
   },
 });
 
@@ -53,4 +61,6 @@ export const {
   setRideFormData,
   setAdminRideData,
   setRides,
+  setLoading,
+  setOrderedRide,
 } = appSlice.actions;

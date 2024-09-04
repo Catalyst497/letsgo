@@ -35,8 +35,8 @@ function AddModal({getRides}) {
       if (res.data === "Ride Added Successfully") {
         setAddModalVisible(false);
         console.log(res.data);
-        alert(res.data);
         getRides();
+        // alert(res.data);
       }
     } catch (e) {
       console.error("Error adding new ride:", e.message);
