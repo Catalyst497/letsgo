@@ -2,131 +2,78 @@
   "cities": [
     {
       "city": "Ado-Ekiti",
-      "nearbyCities": ["Ikere-Ekiti", "Ijero-Ekiti", "Ikole-Ekiti"]
-    },
-    {
-      "city": "Ikere-Ekiti",
-      "nearbyCities": ["Ado-Ekiti", "Ijero-Ekiti", "Ondo"]
-    },
-    {
-      "city": "Ijero-Ekiti",
-      "nearbyCities": ["Ado-Ekiti", "Ikere-Ekiti", "Ilesa"]
-    },
-    {
-      "city": "Ikole-Ekiti",
-      "nearbyCities": ["Ado-Ekiti", "Ijero-Ekiti", "Ilesa"]
-    },
-    {
-      "city": "Lagos",
-      "nearbyCities": ["Ikeja", "Ikorodu", "Epe"]
-    },
-    {
-      "city": "Ikeja",
-      "nearbyCities": ["Lagos", "Ikorodu", "Ota"]
-    },
-    {
-      "city": "Epe",
-      "nearbyCities": ["Ikorodu", "Lagos", "Ijebu-Ode"]
-    },
-    {
-      "city": "Badagry",
-      "nearbyCities": ["Ota", "Lagos", "Ikeja"]
-    },
-    {
-      "city": "Ikorodu",
-      "nearbyCities": ["Ikeja", "Lagos", "Epe"]
-    },
-    {
-      "city": "Abeokuta",
-      "nearbyCities": ["Sagamu", "Ilaro", "Ota"]
-    },
-    {
-      "city": "Ijebu-Ode",
-      "nearbyCities": ["Sagamu", "Epe", "Abeokuta"]
-    },
-    {
-      "city": "Sagamu",
-      "nearbyCities": ["Ijebu-Ode", "Abeokuta", "Ikorodu"]
-    },
-    {
-      "city": "Ota",
-      "nearbyCities": ["Ikeja", "Abeokuta", "Ilaro"]
-    },
-    {
-      "city": "Ilaro",
-      "nearbyCities": ["Ota", "Abeokuta", "Sagamu"]
-    },
-    {
-      "city": "Ayetoro",
-      "nearbyCities": ["Abeokuta", "Ilaro", "Ota"]
-    },
-    {
-      "city": "Akure",
-      "nearbyCities": ["Ondo", "Ikare", "Ado-Ekiti"]
-    },
-    {
-      "city": "Ondo",
-      "nearbyCities": ["Akure", "Owo", "Ikere-Ekiti"]
-    },
-    {
-      "city": "Owo",
-      "nearbyCities": ["Akure", "Ondo", "Ikare"]
-    },
-    {
-      "city": "Ikare",
-      "nearbyCities": ["Akure", "Owo", "Ondo"]
-    },
-    {
-      "city": "Okitipupa",
-      "nearbyCities": ["Ondo", "Ijebu-Ode", "Akure"]
-    },
-    {
-      "city": "Osogbo",
-      "nearbyCities": ["Ile-Ife", "Ikirun", "Ilesa"]
-    },
-    {
-      "city": "Ile-Ife",
-      "nearbyCities": ["Osogbo", "Ilesa", "Ondo"]
-    },
-    {
-      "city": "Ilesa",
-      "nearbyCities": ["Osogbo", "Ile-Ife", "Ijero-Ekiti"]
-    },
-    {
-      "city": "Iwo",
-      "nearbyCities": ["Osogbo", "Ile-Ife", "Ogbomosho"]
-    },
-    {
-      "city": "Ede",
-      "nearbyCities": ["Osogbo", "Iwo", "Ile-Ife"]
-    },
-    {
-      "city": "Ikirun",
-      "nearbyCities": ["Osogbo", "Ede", "Ile-Ife"]
+      "nearbyCities": [
+        "Ijero-Ekiti",
+        "Ikole-Ekiti",
+        "Ilawe-Ekiti",
+        "Iyin-Ekiti",
+        "Ikere-Ekiti",
+        "Akure",
+        "Ondo",
+        "Ilesa",
+        "Ibadan",
+        "Owo"
+      ]
     },
     {
       "city": "Ibadan",
-      "nearbyCities": ["Oyo", "Ogbomosho", "Iseyin"]
+      "nearbyCities": [
+        "Oyo",
+        "Ogbomoso",
+        "Iseyin",
+        "Ife",
+        "Lagos",
+        "Ado-Ekiti",
+        "Abeokuta",
+        "Oshogbo",
+        "Ondo",
+        "Ede"
+      ]
     },
     {
-      "city": "Oyo",
-      "nearbyCities": ["Ibadan", "Ogbomosho", "Iseyin"]
+      "city": "Ife",
+      "nearbyCities": [
+        "Ilesa",
+        "Osogbo",
+        "Ede",
+        "Ijebu-Ode",
+        "Ibadan",
+        "Akure",
+        "Ado-Ekiti",
+        "Ondo",
+        "Iwo",
+        "Lagos"
+      ]
     },
     {
-      "city": "Ogbomosho",
-      "nearbyCities": ["Oyo", "Ibadan", "Iwo"]
+      "city": "Lagos",
+      "nearbyCities": [
+        "Ikeja",
+        "Ikorodu",
+        "Abeokuta",
+        "Ibadan",
+        "Ife",
+        "Ijebu-Ode",
+        "Oshogbo",
+        "Akure",
+        "Ado-Ekiti",
+        "Badagry"
+      ]
     },
     {
-      "city": "Saki",
-      "nearbyCities": ["Iseyin", "Oyo", "Ibadan"]
-    },
-    {
-      "city": "Iseyin",
-      "nearbyCities": ["Saki", "Oyo", "Ibadan"]
-    },
-    {
-      "city": "Igboho",
-      "nearbyCities": ["Saki", "Iseyin", "Oyo"]
+      "city": "Oshogbo",
+      "nearbyCities": [
+        "Ilesa",
+        "Ife",
+        "Ede",
+        "Ikirun",
+        "Iwo",
+        "Ibadan",
+        "Akure",
+        "Ado-Ekiti",
+        "Ondo",
+        "Lagos"
+      ]
     }
   ]
 }
