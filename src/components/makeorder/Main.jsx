@@ -26,7 +26,7 @@ function Main() {
     dispatch(setLoading(true));
     try {
       const response = await axios.post(
-        "http://localhost:3000/initTransaction",
+        "https://letsgo-i9ei.onrender.com/initTransaction",
         { email: rideFormData.email, amount: orderedRide.price }
       );
       if (response.data.status === "success") {
@@ -54,7 +54,7 @@ function Main() {
     if (!rideFormData.time)
       return setFormError("Please tell us when you would like to go.");
     try {
-      const res = await axios.get("http://localhost:3000/checkforride", {
+      const res = await axios.get("https://letsgo-i9ei.onrender.com/checkforride", {
         params: rideFormData,
       });
       if (!res?.data.length) {
