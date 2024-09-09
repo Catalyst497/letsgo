@@ -7,7 +7,7 @@ function Hero() {
   const navigate = useNavigate();
     const {isDesktop} = useResponsiveContent()
   return (
-    <div className={`flex ${!isDesktop ? 'flex-col gap-20' : ''} items-start justify-between px-mobSectionPad pt-12 md:px-sectionPad md:pt-[5rem] overflow-x-hidden`}>
+    <div className={`flex ${!isDesktop ? 'flex-col gap-20' : ''} items-start justify-between px-mobSectionPad pt-12 md:px-sectionPad md:pt-[5rem] overflow-x-hidden bg-bgHero bg-cover`}>
       <div className="flex flex-col items-start gap-[2.5rem] md:gap-[3.9rem] md:mt-[5rem]">
           <h1 className="font-medium text-[5.25rem] md:text-[6.5rem] leading-[124.8%] font-poppins text-forestGreen">
             Book & <br />

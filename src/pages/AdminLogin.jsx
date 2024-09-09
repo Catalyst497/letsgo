@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { TailSpin } from "react-loader-spinner";
 import { Eye, EyeOff } from "react-feather";
 import { useNavigate } from "react-router-dom";
 import useResponsiveContent from "../hooks/useResponsiveContent";
 
 function AdminLogin() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { isMobile, isDesktop } = useResponsiveContent();
   const [passwordOpen, setPasswordOpen] = useState(false);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const [userData, setUserData] = useState({
     email: "",
     password: "",
@@ -16,16 +18,21 @@ function AdminLogin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      if (!userData.email) return setError("Enter your email address")
-      if (!userData.password) return setError("Enter your password")
-        console.log("Hello")
-      const response = await axios.post("https://letsgo-i9ei.onrender.com/admin/login", userData);
+      if (!userData.email) return setError("Enter your email address");
+      if (!userData.password) return setError("Enter your password");
+      setLoading(true);
+      const response = await axios.post(
+        "https://letsgo-i9ei.onrender.com/admin/login",
+        userData
+      );
+      setLoading(false);
       const { token } = response.data;
       localStorage.setItem("token", token);
-      navigate("/admin")
+      navigate("/admin");
       // You can decode the token if you need user info
       // const decoded = jwt_decode(token);
     } catch (err) {
+      setLoading(false);
       setError("Invalid Credentials");
     }
   };
@@ -70,14 +77,21 @@ function AdminLogin() {
               />
             )}
           </div>
-        {error && <div className="text-center text-red-500">{error}</div>}
-        <div className="text-center">
+          {error && <div className="text-center text-red-500">{error}</div>}
+          <div className="flex justify-center">
             <button
               type="button"
-              className="bg-sandyBrown rounded-md text-white px-4 py-2 mt-2"
+              className="bg-sandyBrown rounded-md text-white px-4 py-2 mt-2 flex items-center gap-4"
               onClick={handleSubmit}
             >
-              Submit
+              <span>Submit</span>
+              {loading && (
+                <TailSpin
+                  color="white"
+                  height={isMobile ? "25" : "32"}
+                  width={isMobile ? "25" : "32"}
+                />
+              )}
             </button>
           </div>
         </div>

@@ -4,7 +4,7 @@ import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { setRides } from "../GlobalRedux/slices/AppSlice";
 
-function Ride({ ride, key, TbCurrencyNaira, ArrowRight, getRides }) {
+function Ride({ ride, TbCurrencyNaira, ArrowRight, getRides }) {
   const { isMobile } = useResponsiveContent();
   const { rides } = useSelector((st) => st.app);
   const deleteRide = async (id) => {
@@ -24,7 +24,6 @@ function Ride({ ride, key, TbCurrencyNaira, ArrowRight, getRides }) {
   };
   return (
     <div
-      key={key}
       className="px-8 py-4 flex flex-col md:flex-row gap-4 md:gap-0 justify-between border-[2px] border-steelBlue rounded-md "
     >
       <div className="flex flex-col gap-2">

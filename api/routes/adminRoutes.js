@@ -24,6 +24,30 @@ router.post("/login", async (req, res) => {
   res.json({ token });
 });
 
+router.get("/protectedroute", (req, res) => {
+  const token = req.headers["x-access-token"];
+  if (!token)
+    return res.status(401).json({ message: "No token, authorization denied" });
+  jwt.verify(token, process.env.JWT_SECRET, async (err, decoded) => {
+    try {
+      if (err) {
+        res.json({ auth: false, message: "You failed to authenticate" });
+      } else {
+        req.userId = decoded.id;
+        let user = await User.findById(decoded.id);
+        user = { ...user._doc, password: null };
+        return res.status(200).json({
+          auth: true,
+          message: "Yeah, User is logged in.",
+          user,
+        });
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  });
+});
+
 router.post("/ride", async (req, res) => {
   try {
     const newFormData = new Ride(req.body);
@@ -45,7 +69,7 @@ router.get("/ride", async (req, res) => {
 router.delete("/ride/:id", async (req, res) => {
   try {
     const ride = await Ride.findByIdAndDelete(req.params.id);
-    console.log(ride)
+    console.log(ride);
     if (!ride) {
       return res.status(404).json({ message: "Ride not found" });
     }
@@ -54,6 +78,5 @@ router.delete("/ride/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
 
 module.exports = router;

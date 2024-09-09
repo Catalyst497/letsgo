@@ -5,6 +5,8 @@ export default {
     extend: {
       backgroundImage: {
         btnBg: "linear-gradient(to right, #ED9900, #FFA500)",
+        bgHero: "url('/Hero-full.png')",
+        bgAbout: "url('/About-full.png')",
       },
       colors: {
         forestGreen: "#228B22",
@@ -16,7 +18,7 @@ export default {
         gainsboro: "#DCDCDC",
         sandyBrown: "#F4A460",
         steelBlue: "#B0C4DE",
-        darkSlateGray: "#2F4F4F"
+        darkSlateGray: "#2F4F4F",
       },
       spacing: {
         sectionPad: "4.8rem",

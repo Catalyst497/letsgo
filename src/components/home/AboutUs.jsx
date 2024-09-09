@@ -4,7 +4,7 @@ import useResponsiveContent from "../../hooks/useResponsiveContent";
 function AboutUs() {
   const { isMobile, isDesktop } = useResponsiveContent();
   return (
-    <section className="px-mobSectionPad md:px-sectionPad pt-[10rem]">
+    <section className="px-mobSectionPad md:px-sectionPad pt-[10rem] bg-bgAbout bg-cover">
       <div>
         <div className="relative z-10">
           <div className="title flex gap-4 items-center">
@@ -30,11 +30,11 @@ function AboutUs() {
       </div>
       <div>
         {isDesktop && (
-          <div className="image flex justify-start mt-[-13rem] relative">
-            <img src="./bro.png" alt="" />
+          <div className="image flex justify-start mt-[-13rem] relative ">
+            <img src="./bro.png" className="" alt="" />
           </div>
         )}
-        <div className="relative z-10 mt-[6rem]">
+        <div className={`relative z-10 ${isDesktop ? "-mt-4" : "mt-[6rem]"}`}>
           <div className="title flex justify-end gap-4 items-center">
             <div className="text-forestGreen font-poppins font-semibold text-[1.9rem] md:text-[2.75rem]">
               Our Mission

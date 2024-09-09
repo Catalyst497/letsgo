@@ -11,7 +11,7 @@ import "swiper/css/scrollbar";
 function Testimonials() {
   const {isMobile, isDesktop} = useResponsiveContent()
   return (
-    <section className="testimonials px-mobSectionPad md:px-sectionPad py-[13rem] md:py-[15rem]">
+    <section className="testimonials px-mobSectionPad md:px-sectionPad py-[13rem] md:py-[15rem] bg-white/55 backdrop:blur-lg">
       <div className="title text-center">
         <h2>Voices of Our Community</h2>
         <div>

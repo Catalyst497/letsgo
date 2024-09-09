@@ -1,4 +1,7 @@
-- Send user an email on completion of his order
-- Show the available rides
-- Allow admin add and remove rides.
-- 
+- Make those selections stuff available for all major cities in Nigeria.
+- Allow selection bars to have a little search part to search throught locations.
+- Deal with that routing problem of app.
+- Recheck your designs. $1
+- Show a few important people the application.
+- Make that restricted route a real restricted route.
+- Some sweet soft animations. 
