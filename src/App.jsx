@@ -7,6 +7,7 @@ import AdminLogin from "./pages/AdminLogin";
 // import AdminRegister from "./pages/AdminRegister";
 import AdminDashboard from "./pages/AdminDashboard";
 import PrivateRoute from "./components/PrivateRoute";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             </PrivateRoute>
           }
         />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
