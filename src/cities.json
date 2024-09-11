@@ -1,18 +1,18 @@
 {
   "cities": [
     {
-      "city": "Ado-Ekiti",
+      "city": "Lagos",
       "nearbyCities": [
-        "Ijero-Ekiti",
-        "Ikole-Ekiti",
-        "Ilawe-Ekiti",
-        "Iyin-Ekiti",
-        "Ikere-Ekiti",
-        "Akure",
-        "Ondo",
-        "Ilesa",
+        "Ikeja",
+        "Ikorodu",
+        "Abeokuta",
         "Ibadan",
-        "Owo"
+        "Ijebu-Ode",
+        "Badagry",
+        "Oshogbo",
+        "Ife",
+        "Akure",
+        "Benin City"
       ]
     },
     {
@@ -21,58 +21,193 @@
         "Oyo",
         "Ogbomoso",
         "Iseyin",
-        "Ife",
+        "Abeokuta",
+        "Oshogbo",
         "Lagos",
         "Ado-Ekiti",
-        "Abeokuta",
-        "Oshogbo",
+        "Akure",
         "Ondo",
-        "Ede"
+        "Benin City"
       ]
     },
     {
-      "city": "Ife",
+      "city": "Abuja",
       "nearbyCities": [
+        "Minna",
+        "Lokoja",
+        "Kaduna",
+        "Jos",
+        "Lafia",
+        "Bida",
+        "Keffi",
+        "Katsina",
+        "Zaria",
+        "Suleja"
+      ]
+    },
+    {
+      "city": "Kano",
+      "nearbyCities": [
+        "Katsina",
+        "Zaria",
+        "Kaduna",
+        "Dutse",
+        "Gusau",
+        "Bauchi",
+        "Sokoto",
+        "Maiduguri",
+        "Jos",
+        "Kano"
+      ]
+    },
+    {
+      "city": "Port Harcourt",
+      "nearbyCities": [
+        "Aba",
+        "Owerri",
+        "Umuahia",
+        "Calabar",
+        "Enugu",
+        "Yenagoa",
+        "Uyo",
+        "Benin City",
+        "Onitsha",
+        "Warri"
+      ]
+    },
+    {
+      "city": "Katsina",
+      "nearbyCities": [
+        "Kano",
+        "Zaria",
+        "Kaduna",
+        "Sokoto",
+        "Gusau",
+        "Kebbi",
+        "Birnin Kebbi",
+        "Funtua",
+        "Dutse",
+        "Bauchi"
+      ]
+    },
+    {
+      "city": "Enugu",
+      "nearbyCities": [
+        "Onitsha",
+        "Owerri",
+        "Umuahia",
+        "Awka",
+        "Nsukka",
+        "Aba",
+        "Port Harcourt",
+        "Calabar",
+        "Warri",
+        "Benin City"
+      ]
+    },
+    {
+      "city": "Benin City",
+      "nearbyCities": [
+        "Warri",
+        "Sapele",
+        "Asaba",
+        "Auchi",
+        "Ondo",
+        "Akure",
+        "Ibadan",
+        "Lagos",
+        "Owerri",
+        "Port Harcourt"
+      ]
+    },
+    {
+      "city": "Maiduguri",
+      "nearbyCities": [
+        "Damaturu",
+        "Potiskum",
+        "Gombe",
+        "Bauchi",
+        "Yola",
+        "Jalingo",
+        "Kano",
+        "Yobe",
+        "Jos",
+        "Sokoto"
+      ]
+    },
+    {
+      "city": "Sokoto",
+      "nearbyCities": [
+        "Kano",
+        "Gusau",
+        "Birnin Kebbi",
+        "Katsina",
+        "Zaria",
+        "Kaduna",
+        "Maiduguri",
+        "Bauchi",
+        "Dutse",
+        "Yola"
+      ]
+    },
+    {
+      "city": "Jos",
+      "nearbyCities": [
+        "Bauchi",
+        "Kaduna",
+        "Zaria",
+        "Abuja",
+        "Minna",
+        "Kano",
+        "Gombe",
+        "Maiduguri",
+        "Makurdi",
+        "Lafia"
+      ]
+    },
+    {
+      "city": "Akure",
+      "nearbyCities": [
+        "Ondo",
+        "Ado-Ekiti",
+        "Benin City",
+        "Oshogbo",
+        "Ibadan",
+        "Abeokuta",
         "Ilesa",
-        "Osogbo",
-        "Ede",
+        "Lagos",
+        "Warri",
+        "Ife"
+      ]
+    },
+    {
+      "city": "Kaduna",
+      "nearbyCities": [
+        "Zaria",
+        "Abuja",
+        "Kano",
+        "Minna",
+        "Jos",
+        "Katsina",
+        "Sokoto",
+        "Gusau",
+        "Lafia",
+        "Bauchi"
+      ]
+    },
+    {
+      "city": "Abeokuta",
+      "nearbyCities": [
         "Ijebu-Ode",
         "Ibadan",
-        "Akure",
-        "Ado-Ekiti",
-        "Ondo",
-        "Iwo",
-        "Lagos"
-      ]
-    },
-    {
-      "city": "Lagos",
-      "nearbyCities": [
-        "Ikeja",
-        "Ikorodu",
-        "Abeokuta",
-        "Ibadan",
-        "Ife",
-        "Ijebu-Ode",
         "Oshogbo",
-        "Akure",
+        "Lagos",
         "Ado-Ekiti",
-        "Badagry"
-      ]
-    },
-    {
-      "city": "Oshogbo",
-      "nearbyCities": [
-        "Ilesa",
-        "Ife",
-        "Ede",
-        "Ikirun",
-        "Iwo",
-        "Ibadan",
         "Akure",
-        "Ado-Ekiti",
         "Ondo",
-        "Lagos"
+        "Ijebu-Igbo",
+        "Sagamu",
+        "Sango Ota"
       ]
     }
   ]

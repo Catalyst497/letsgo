@@ -1,7 +1,7 @@
-- Make those selections stuff available for all major cities in Nigeria.
-- Allow selection bars to have a little search part to search throught locations.
+- Make those selections stuff available for all major cities in Nigeria. $1
+- Allow selection bars to have a little search part to search through locations. $1
 - Deal with that routing problem of app.
 - Recheck your designs. $1
-- Show a few important people the application.
-- Make that restricted route a real restricted route.
+- Make that restricted route a real restricted route. $1
 - Some sweet soft animations. 
+- Show a few important people the application.

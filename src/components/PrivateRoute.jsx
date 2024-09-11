@@ -11,7 +11,7 @@ const PrivateRoute = ({ children }) => {
     if (!localStorage.getItem("token")) return navigate("/admin/login");
     try {
       const res = await axios.get(
-        "http://localhost:3000/admin/protectedroute",
+        "https://letsgo-i9ei.onrender.com/admin/protectedroute",
         {
           headers: {
             "x-access-token": localStorage.getItem("token"),
